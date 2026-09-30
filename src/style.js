@@ -20,11 +20,10 @@ export const styles = StyleSheet.create({
     contentFooter: {
         flex: 1,
         position: "absolute",
-        flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        left: "30%",
-        right: "30%",
+        left: "32%",
+        right: "28%",
         top: "82%",
         bottom: "10%",
     },

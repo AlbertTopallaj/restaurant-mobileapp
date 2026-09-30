@@ -1,4 +1,4 @@
-import {Image, ImageBackground, Text, View} from "react-native";
+import {ImageBackground, Text, View} from "react-native";
 import {styles} from "../style.js"
 import MenuButton from "../components/MenuButton";
 
@@ -22,8 +22,8 @@ export default function Home() {
             <MenuButton imagePath={images.dryck} name={"Dryck"} navigateTo={"Home"}/>
         </View>
         <View style={styles.contentFooter}>
-            <Image style={styles.menuButtonIcon} source={images.dryck} />
-            <Text style={styles.text}>Endast 5:-</Text>
+            <Text style={[styles.text, {color: "red"}]}>25% RABATT</Text>
+            <Text style={[styles.text, {fontSize: 20}]}>Vid kontantköp</Text>
         </View>
     </ImageBackground>
 }
