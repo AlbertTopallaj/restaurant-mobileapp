@@ -85,14 +85,14 @@ export const meals = [
                 name: "Chokladboll",
                 image: "../resources/meals/chokladboll.png",
                 content: "Smör, havregryn, kakao, koffein",
-                price: ,
+                price: 10,
             },
             {
                 id: 12,
                 name: "Kladdkaka",
                 image: "../resources/meals/kladdkaka.png",
                 content: "Vetemjöl, ägg, smör, socker, med vispgrädde",
-                price: ,
+                price: 20,
             },
         ]
     },
