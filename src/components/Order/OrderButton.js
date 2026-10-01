@@ -3,6 +3,7 @@ import { Pressable, Text } from "react-native";
 import {styles} from "../../style";
 
 export default function OrderButton(){ 
+    const { meals, placeOrder } = useOrder(); 
 
     function confirmOrder() {
            if(meals.length === 0) return;
