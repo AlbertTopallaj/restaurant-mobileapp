@@ -61,7 +61,8 @@ export const styles = StyleSheet.create({
     header: {
         fontFamily: "serif",
         fontSize: 30,
-        
+        fontWeight: "bold",
+        lineHeight: 25,
     }
 
 });
