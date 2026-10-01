@@ -4,6 +4,7 @@ import OrderHeader from "../components/Order/OrderHeader";
 import OrderList from "../components/Order/OrderList";
 import { styles } from "../style";
 import { View } from "react-native"
+import { add } from "react-native/types_generated/Libraries/Animated/AnimatedExports";
 
 
 export default function Order() {
@@ -25,7 +26,7 @@ export default function Order() {
     <View style={styles.content}> 
      <OrderHeader/>
      <OrderList meals={meals} addMeal={addMeal} placeOrder={placeOrder}/>
-     <OrderButton/>
+     <OrderButton meals={meals} addMeal={addMeal} placeOrder={placeOrder}/>
      </View>
     </>
 }
