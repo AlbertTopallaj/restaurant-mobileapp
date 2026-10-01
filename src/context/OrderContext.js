@@ -9,3 +9,7 @@ export function OrderProvider({ children }) {
 function addMeal(meal) {
     setMeals(prev => [...prev, meal]);
 }
+
+function removeMeal(index) {
+    setMeals(prev => prev.filter((_, i) => i !==index));
+}
