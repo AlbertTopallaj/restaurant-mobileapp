@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Pressable, Text } from "react-native";
-import { styles } from "../../style";
+import {styles} from "../../style";
 
 export default function OrderButton(){ 
 
