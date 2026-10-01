@@ -3,6 +3,6 @@ import {styles} from "../../style";
 
 export default function OrderHeader() {
     return <>
-    <Text style={styles.text}>Beställ mat</Text>
+    <Text style={styles.header}>Beställ mat</Text>
     </>
 }
