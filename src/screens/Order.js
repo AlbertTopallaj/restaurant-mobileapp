@@ -20,7 +20,7 @@ export default function Order() {
     return <>
     <View style={styles.content}> 
      <OrderHeader/>
-     <OrderList/>
+     <OrderList meals={meals} addMeal={addMeal} placeOrder={placeOrder}/>
      <OrderButton/>
      </View>
     </>
