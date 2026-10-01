@@ -2,10 +2,13 @@ import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import Home from "./src/screens/Home"
 import Order from "./src/screens/Order";
+import { OrderProvider } from "./src/context/OrderContext";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
-  return <NavigationContainer>
+  return (
+    <OrderProvider>
+  <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen
           name="Home"
@@ -23,5 +26,7 @@ export default function App() {
       />
 
     </Stack.Navigator>
-  </NavigationContainer>;
+  </NavigationContainer>
+  </OrderProvider>
+  ); 
 }
