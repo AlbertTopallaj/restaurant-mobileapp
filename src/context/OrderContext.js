@@ -13,3 +13,13 @@ function addMeal(meal) {
 function removeMeal(index) {
     setMeals(prev => prev.filter((_, i) => i !==index));
 }
+
+function placeOrder() {
+    setMeals([]);
+}
+
+return (
+    <OrderContext.Provider value={{ meals, addMeal, removeMeal, placeOrder}}>
+        {children}
+    </OrderContext.Provider>
+)
