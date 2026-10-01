@@ -8,7 +8,7 @@ import { useOrder } from "../context/OrderContext";
 
 
 export default function Order() {
-
+    const { addMeal } = useOrder();
     return <>
     <View style={styles.content}> 
      <OrderHeader/>
