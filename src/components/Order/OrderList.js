@@ -12,7 +12,7 @@ export default function OrderList() {
 
     return <>
     <View style={styles.content}>
-    <Text style={styles.text}>Beställ mat</Text>
+   
     </View>
     </>
 }
