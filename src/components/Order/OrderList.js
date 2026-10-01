@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { styles } from "../../style";
-import { View } from "react-native"
+import { View, Text } from "react-native"
 
 export default function OrderList() {
 
@@ -12,7 +12,7 @@ export default function OrderList() {
 
     return <>
     <View style={styles.content}>
-    
+    <Text style={styles.text}>Beställ mat</Text>
     </View>
     </>
 }
