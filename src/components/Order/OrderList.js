@@ -3,6 +3,7 @@ import {styles} from "../../style";
 import { View, Text, FlatList } from "react-native"
 
 export default function OrderList() {
+    const { meals } = useOrder();
     return <>
     <View style={styles.content}>
         <FlatList
