@@ -7,6 +7,8 @@ export default function OrderButton({ meals, placeOrder }){
     function confirmOrder() {
            if(meals.length === 0) {
             return;
+
+            placeOrder();
            }
         }
 

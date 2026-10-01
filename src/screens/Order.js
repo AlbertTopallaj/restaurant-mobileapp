@@ -13,6 +13,10 @@ export default function Order() {
         setMeals(prev => [...prev, meal]);
     }
 
+    function removeMeal(index) {
+        setMeals(prev => prev.filter((_, i) => i !== index));
+    }
+
     function placeOrder() {
         setMeals([]);
     }
