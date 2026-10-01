@@ -3,7 +3,7 @@ export const meals = [
         kebabs: [
             {
                 id: 1,
-                name: "Kebabruller",
+                name: "Kebabrulle",
                 image: "../resources/meals/kebabrulle.png",
                 content: "Kebab, tomatsås, mjöl, gurka, tomat, rödlök, feferoni, isbergssallad",
                 price: 100,
