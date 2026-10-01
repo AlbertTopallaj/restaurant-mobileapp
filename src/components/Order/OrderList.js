@@ -2,7 +2,7 @@ import { useContext } from "react";
 import {styles} from "../../style";
 import { View, Text, FlatList } from "react-native"
 
-export default function OrderList({ meals, addMeal, placeOrder }) {
+export default function OrderList() {
     return <>
     <View style={styles.content}>
         <FlatList
