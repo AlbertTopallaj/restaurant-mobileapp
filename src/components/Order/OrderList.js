@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import {styles} from "../../style";
 import { View, Text, FlatList } from "react-native"
 
