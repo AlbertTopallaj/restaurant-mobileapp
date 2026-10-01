@@ -1,6 +1,7 @@
 import {ImageBackground, Text, View} from "react-native";
 import {styles} from "../style.js"
 import MenuButton from "../components/MenuButton";
+import Order from "./Order.js";
 
 export default function Home() {
     const images = {
@@ -8,7 +9,8 @@ export default function Home() {
         kebab: require("../resources/kebab.png"),
         dryck: require("../resources/dryck.png")
     };
-    return <ImageBackground
+    return <Order/>
+    /* <ImageBackground
         source={require("../resources/background-no-food.png")}
         style={styles.background}
         resizeMode="cover">
@@ -26,4 +28,5 @@ export default function Home() {
             <Text style={[styles.text, {fontSize: 20}]}>Vid kontantköp</Text>
         </View>
     </ImageBackground>
+    */
 }
