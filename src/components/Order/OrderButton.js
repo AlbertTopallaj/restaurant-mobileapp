@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Pressable, Text } from "react-native";
+import { styles } from "../../style";
 
 export default function OrderButton(){ 
 
@@ -13,7 +14,7 @@ export default function OrderButton(){
 
     return <>
     <Pressable onPress={confirmOrder}>
-        <Text>Slutför beställning</Text>
+        <Text style={styles.pressableText}>Slutför beställning</Text>
     </Pressable>
     </>
 }
