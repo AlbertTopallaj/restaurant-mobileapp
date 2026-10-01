@@ -8,25 +8,12 @@ import { add } from "react-native/types_generated/Libraries/Animated/AnimatedExp
 
 
 export default function Order() {
-    const [meals, setMeals] = useState([]);
-
-    function addMeal(meal) {
-        setMeals(prev => [...prev, meal]);
-    }
-
-    function removeMeal(index) {
-        setMeals(prev => prev.filter((_, i) => i !== index));
-    }
-
-    function placeOrder() {
-        setMeals([]);
-    }
 
     return <>
     <View style={styles.content}> 
      <OrderHeader/>
-     <OrderList meals={meals} addMeal={addMeal} placeOrder={placeOrder}/>
-     <OrderButton meals={meals} addMeal={addMeal} placeOrder={placeOrder}/>
+     <OrderList/>
+     <OrderButton/>
      </View>
     </>
 }
