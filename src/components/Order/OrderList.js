@@ -1,12 +1,21 @@
 import { useContext } from "react";
 import {styles} from "../../style";
-import { View, Text } from "react-native"
+import { View, Text, FlatList } from "react-native"
 
 export default function OrderList({ meals, addMeal, placeOrder }) {
     return <>
     <View style={styles.content}>
-        <FlatList></FlatList>
-   
+        <FlatList
+        data={meals}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item, index }) => (
+            <View>
+            <Text>{item.name}</Text>
+            <Text>${item.price}</Text>
+            </View>
+        )}
+        ListEmptyComponent={<Text>Inga rätter har lagts in.</Text>}
+        />
     </View>
     </>
 }
