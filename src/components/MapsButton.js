@@ -45,8 +45,22 @@ export default function MapsButton() {
                 throw new Error(`Requires foreground permission`)
             }
 
-            const location = await Location.getCurrentPositionAsync({
-                accuracy: Location.Accuracy.Low
+
+            const getCurrentLocation = await Location.getCurrentPositionAsync({
+                accuracy: Location.Accuracy.Balanced
+            });
+
+            const timeout = new Promise(r => {
+                setTimeout(() => r(null), 2000)
+            })
+
+            let location = await Promise.race([
+                getCurrentLocation, timeout
+            ])
+
+            if (!location) location = await Location.getLastKnownPositionAsync({
+                maxAge: 10 * 60 * 1000,
+                requiredAccuracy: 5000
             });
 
             myLatitude = location.coords.latitude;
