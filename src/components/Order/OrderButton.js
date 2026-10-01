@@ -1,5 +1,6 @@
 import { Pressable, Text } from "react-native";
 import {styles} from "../../style";
+import { useOrder } from "../../context/OrderContext";
 
 export default function OrderButton(){ 
     const { meals, placeOrder } = useOrder(); 
