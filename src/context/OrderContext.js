@@ -4,9 +4,8 @@ const OrderContext = createContext();
 
 export function OrderProvider({ children }) {
     const [ meals, setMeals ] = useState([]);
-}
 
-function addMeal(meal) {
+    function addMeal(meal) {
     setMeals(prev => [...prev, meal]);
 }
 
@@ -23,3 +22,5 @@ return (
         {children}
     </OrderContext.Provider>
 )
+}
+
