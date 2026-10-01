@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import Order from "../screens/Order";
 
 const OrderContext = createContext();
 
@@ -24,3 +25,6 @@ return (
 )
 }
 
+export function useOrder(){
+    return useContext(OrderContext);
+}
