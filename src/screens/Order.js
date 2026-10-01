@@ -2,7 +2,7 @@ import OrderButton from "../components/Order/OrderButton";
 import OrderHeader from "../components/Order/OrderHeader";
 import OrderList from "../components/Order/OrderList";
 import { styles } from "../style";
-import { Pressable, View } from "react-native"
+import { Pressable, View, Text } from "react-native"
 
 
 
