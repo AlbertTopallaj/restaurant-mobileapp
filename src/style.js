@@ -58,4 +58,10 @@ export const styles = StyleSheet.create({
         textAlign: "center",
     },
 
+    header: {
+        fontFamily: "serif",
+        fontSize: 30,
+        
+    }
+
 });
