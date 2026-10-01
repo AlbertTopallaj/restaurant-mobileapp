@@ -5,8 +5,8 @@ import {styles} from "../../style";
 export default function OrderButton({ meals, placeOrder }){ 
 
     function confirmOrder() {
-           if(order.length === 0) {
-            return
+           if(meals.length === 0) {
+            return;
            }
         }
 
