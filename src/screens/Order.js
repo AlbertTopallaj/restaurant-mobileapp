@@ -4,11 +4,12 @@ import OrderList from "../components/Order/OrderList";
 import { styles } from "../style";
 import { Pressable, View, Text } from "react-native"
 import { useOrder } from "../context/OrderContext";
+import { useContext } from "react";
 
 
 
 export default function Order() {
-    const { addMeal } = useOrder();
+    const { order } = useContext(OrderContext)
     return <>
     <View style={styles.content}> 
      <OrderHeader/>
