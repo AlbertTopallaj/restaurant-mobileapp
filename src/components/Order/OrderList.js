@@ -4,6 +4,7 @@ import {styles} from "../../style";
 import { View, Text, FlatList } from "react-native"
 
 export default function OrderList() {
+    const {order, deleteMealFromOrder } = useOrder();
     
     return <>
     <View style={styles.content}>
