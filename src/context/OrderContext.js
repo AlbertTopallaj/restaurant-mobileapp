@@ -9,14 +9,6 @@ export function OrderProvider({ children }) {
     setOrder(currentData => [...currentData, meal]);
 }
 
-function removeMeal(index) {
-    setMeals(prev => prev.filter((_, i) => i !==index));
-}
-
-function placeOrder() {
-    setMeals([]);
-}
-
 return (
     <OrderContext.Provider value={{cart, addMealToOrder}}>
         {children}
