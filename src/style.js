@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
 
   content: {
     flex: 1,
-    gap: 60,
+    gap: 40,
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",
