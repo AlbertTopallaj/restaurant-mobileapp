@@ -25,6 +25,7 @@ export default function Home() {
             <MenuButton imagePath={images.pizza} name={"Pizza"} navigateTo={"CategoryScreen"}/>
             <MenuButton imagePath={images.kebab} name={"Kebab"} navigateTo={"CategoryScreen"}/>
             <MenuButton imagePath={images.dryck} name={"Drink"} navigateTo={"CategoryScreen"}/>
+            <MenuButton imagePath={images.order} name={"Order"} navigateTo={"Order"}/>
         </View>
         <View style={styles.contentFooter}>
             <Text style={[styles.text, {color: "red"}]}>25% RABATT</Text>
