@@ -10,7 +10,7 @@ export default function Home() {
     pizza: require("../resources/pizza.png"),
     kebab: require("../resources/kebab.png"),
     dryck: require("../resources/dryck.png"),
-    order: require("../resources/order.jpg"),
+    order: require("../resources/kitchenbell.jpg"),
   };
 
   return (
