@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, ImageBackground } from "react-native";
+import { View, Text, FlatList, Image, ImageBackground, Pressable } from "react-native";
 import { meals } from "../data/Meals";
 import { styles } from "../style";
 import { useOrder } from "../context/OrderContext";
@@ -54,6 +54,7 @@ export default function CategoryScreen({ route }) {
                         const cleanImageName = item.image.split("/").pop();
 
                         return (
+                            <Pressable onPress={() => addMealToOrder(item)}>
                             <View
                                 style={{
                                     backgroundColor: "#ffffffcc",
@@ -91,6 +92,7 @@ export default function CategoryScreen({ route }) {
                             </View>
 
                             </View>
+                            </Pressable>
                         );
                     }}
                 />
