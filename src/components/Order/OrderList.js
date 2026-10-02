@@ -9,7 +9,7 @@ export default function OrderList() {
     return <>
     <View style={styles.content}>
         <FlatList
-        data={meals}
+        data={order}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item, index }) => (
             <View>
