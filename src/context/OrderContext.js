@@ -14,8 +14,12 @@ function getTotalPrice(){
     return totalPrice;
 }
 
+function deleteMealFromOrder(meal) {
+    
+}
+
 return (
-    <OrderContext.Provider value={{cart, addMealToOrder}}>
+    <OrderContext.Provider value={{order, addMealToOrder, getTotalPrice}}>
         {children}
     </OrderContext.Provider>
 )
