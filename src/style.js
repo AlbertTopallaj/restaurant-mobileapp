@@ -1,68 +1,69 @@
-import {StyleSheet} from "react-native";
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    background: {
-        flex: 1,
-    },
+  background: {
+    flex: 1,
+  },
 
-    content: {
-        flex: 1,
-        gap: 60,
-        alignItems: "center",
-        justifyContent: "center",
-        position: "absolute",
-        left: "12%",
-        right: "12%",
-        top: "16%",
-        bottom: "19%",
-    },
+  content: {
+    flex: 1,
+    gap: 60,
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
+    left: "12%",
+    right: "12%",
+    top: "16%",
+    bottom: "19%",
+  },
 
-    contentFooter: {
-        flex: 1,
-        position: "absolute",
-        alignItems: "center",
-        justifyContent: "center",
-        left: "32%",
-        right: "28%",
-        top: "82%",
-        bottom: "10%",
-    },
+  contentFooter: {
+    flex: 1,
+    position: "absolute",
+    alignItems: "center",
+    justifyContent: "center",
+    left: "32%",
+    right: "28%",
+    top: "82%",
+    bottom: "10%",
+  },
 
-    menuButton: {
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 8,
-    },
+  menuButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
 
-    menuButtonIcon: {
-        resizeMode: "contain",
-        maxHeight: 80,
-        maxWidth: 80,
-    },
+  menuButtonIcon: {
+    resizeMode: "contain",
+    maxHeight: 80,
+    maxWidth: 80,
+  },
 
-    pressableText: {
-        fontFamily: "serif",
-        fontSize: 50,
-        fontWeight: "bold",
-        color: "#8F2F24",
-        textAlign: "center",
-        letterSpacing: 1,
-    },
+  pressableText: {
+    fontFamily: "serif",
+    fontSize: 50,
+    fontWeight: "bold",
+    color: "#8F2F24",
+    textAlign: "center",
+    letterSpacing: 1,
+  },
 
-    text: {
-        fontFamily: "serif",
-        fontSize: 22,
-        fontWeight: "bold",
-        lineHeight: 25,
-        color: "#241B14",
-        textAlign: "center",
-    },
+  text: {
+    fontFamily: "serif",
+    fontSize: 22,
+    fontWeight: "bold",
+    lineHeight: 25,
+    color: "#241B14",
+    textAlign: "center",
+  },
 
-    header: {
-        fontFamily: "serif",
-        fontSize: 30,
-        fontWeight: "bold",
-        lineHeight: 25,
-    }
+  header: {
+    fontFamily: "serif",
+    fontSize: 30,
+    fontWeight: "bold",
+    lineHeight: 25,
+  },
 
+  orderButton: {},
 });
