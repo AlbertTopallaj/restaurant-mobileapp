@@ -18,7 +18,7 @@ function placeOrder() {
 }
 
 return (
-    <OrderContext.Provider value={{ meals, addMeal, removeMeal, placeOrder}}>
+    <OrderContext.Provider value={{cart, addMealToOrder}}>
         {children}
     </OrderContext.Provider>
 )
