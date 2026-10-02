@@ -15,7 +15,7 @@ function getTotalPrice(){
 }
 
 function deleteMealFromOrder(meal) {
-    setOrder(prev => prev.filter((_, i) => i !== index));
+    setOrder(prev => prev.filter((_, i) => i !== meal));
 }
 
 return (
