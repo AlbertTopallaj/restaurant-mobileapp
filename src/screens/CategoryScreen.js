@@ -27,6 +27,7 @@ const mealImages = {
 };
 
 export default function CategoryScreen({ route }) {
+    const { addMealToOrder } = useOrder();
 
     const category = route.params.category;
 
