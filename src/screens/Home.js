@@ -2,6 +2,7 @@ import {ImageBackground, Text, View} from "react-native";
 import {styles} from "../style.js"
 import MenuButton from "../components/MenuButton";
 import Order from "./Order.js";
+import MapsButton from "../components/MapsButton";
 
 export default function Home() {
     const images = {
@@ -27,6 +28,7 @@ export default function Home() {
             <Text style={[styles.text, {color: "red"}]}>25% RABATT</Text>
             <Text style={[styles.text, {fontSize: 20}]}>Vid kontantköp</Text>
         </View>
+        <MapsButton />
     </ImageBackground>
     */
 }
