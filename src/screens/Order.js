@@ -4,6 +4,7 @@ import OrderList from "../components/Order/OrderList";
 import { styles } from "../style";
 import { Pressable, View, Text, ImageBackground } from "react-native"
 import { useOrder } from "../context/OrderContext";
+import OrderTotalPrice from "../components/Order/OrderTotalPrice";
 
 export default function Order() {
     const { order, addMealToOrder } = useOrder();
@@ -16,6 +17,7 @@ export default function Order() {
     <View style={styles.content}> 
      <OrderHeader/>
      <OrderList/>
+     <OrderTotalPrice/>
      <OrderButton/>
      </View>
      </ImageBackground>
