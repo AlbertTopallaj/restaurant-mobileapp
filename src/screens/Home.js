@@ -12,7 +12,6 @@ export default function Home() {
     };
 
     return <> 
-    <Order/>
     <ImageBackground
         source={require("../resources/background-no-food.png")}
         style={styles.background}
