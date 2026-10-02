@@ -6,7 +6,7 @@ export default function OrderTotalPrice(){
 
     return <>
     <View>
-        <Text>{getTotalPrice}</Text>
+        <Text>{getTotalPrice()}</Text>
     </View>
     </>
 }
