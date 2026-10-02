@@ -6,7 +6,7 @@ export function OrderProvider({ children }) {
     const [order, setOrder] = useState([]);
 
     function addMealToOrder(meal) {
-    setOrder(prev => [...prev, meal]);
+    setOrder(currentData => [...currentData, meal]);
 }
 
 function removeMeal(index) {
