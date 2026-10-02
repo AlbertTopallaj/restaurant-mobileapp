@@ -12,9 +12,6 @@ export default function Order() {
     <View style={styles.content}> 
      <OrderHeader/>
      <OrderList/>
-     <Pressable onPress={() => addMeal({ name: "Pasta", price: 89})}>
-        <Text>Lägg till testrätt</Text>
-     </Pressable>
      <OrderButton/>
      </View>
     </>
