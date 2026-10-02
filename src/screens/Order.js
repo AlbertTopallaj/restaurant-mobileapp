@@ -6,7 +6,8 @@ import { Pressable, View, Text } from "react-native"
 import { useOrder } from "../context/OrderContext";
 
 export default function Order() {
-    const { order } = useContext(OrderContext)
+    const { order, addMealToOrder } = useOrder;
+
     return <>
     <View style={styles.content}> 
      <OrderHeader/>
