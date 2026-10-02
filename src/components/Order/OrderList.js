@@ -1,9 +1,11 @@
+import { useContext } from "react";
 import { useOrder } from "../../context/OrderContext"; 
 import {styles} from "../../style";
 import { View, Text, FlatList } from "react-native"
 
 export default function OrderList() {
-    const { meals } = useOrder();
+    // const {addMealToOrder} = useContext(OrderContext);
+    // onPress {() => addToCart}
     return <>
     <View style={styles.content}>
         <FlatList

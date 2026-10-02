@@ -26,10 +26,10 @@ export default function MapsButton() {
                             "Ocp-Apim-Subscription-Key": "8d39a7340ee7439f8b4c1e995c8f3e4a"
                         }
                     }
-                );
+                )
 
                 if (!response.ok) {
-                    throw new Error(`Systembolaget API: ${response.status}`);
+                    throw new Error(`Systembolaget API: ${response.status}`)
                 }
 
                 const dataDump = await response.json()
@@ -46,9 +46,9 @@ export default function MapsButton() {
             }
 
 
-            const getCurrentLocation = await Location.getCurrentPositionAsync({
+            const getCurrentLocation = Location.getCurrentPositionAsync({
                 accuracy: Location.Accuracy.Balanced
-            });
+            })
 
             const timeout = new Promise(r => {
                 setTimeout(() => r(null), 2000)
@@ -61,7 +61,12 @@ export default function MapsButton() {
             if (!location) location = await Location.getLastKnownPositionAsync({
                 maxAge: 10 * 60 * 1000,
                 requiredAccuracy: 5000
-            });
+            })
+
+            if (!location) {
+                console.log("Could not get local location")
+                return
+            }
 
             myLatitude = location.coords.latitude;
             myLongitude = location.coords.longitude;
