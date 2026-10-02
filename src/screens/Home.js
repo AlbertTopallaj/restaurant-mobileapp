@@ -39,7 +39,6 @@ export default function Home() {
             name={"Drink"}
             navigateTo={"CategoryScreen"}
           />
-          <Ionicons name="cart" size={32} color="red" />
           <MenuButton imagePath={null} name={"Order"} navigateTo={"Order"} />
         </View>
         <View style={styles.contentFooter}>
