@@ -10,6 +10,7 @@ export default function Home() {
     pizza: require("../resources/pizza.png"),
     kebab: require("../resources/kebab.png"),
     dryck: require("../resources/dryck.png"),
+    order: require("../resources/order.jpg"),
   };
 
   return (
@@ -39,7 +40,11 @@ export default function Home() {
             name={"Drink"}
             navigateTo={"CategoryScreen"}
           />
-          <MenuButton imagePath={null} name={"Order"} navigateTo={"Order"} />
+          <MenuButton
+            imagePath={images.order}
+            name={"Order"}
+            navigateTo={"Order"}
+          />
         </View>
         <View style={styles.contentFooter}>
           <Text style={[styles.text, { color: "red" }]}>25% RABATT</Text>
