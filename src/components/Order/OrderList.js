@@ -4,8 +4,7 @@ import {styles} from "../../style";
 import { View, Text, FlatList } from "react-native"
 
 export default function OrderList() {
-    // const {addMealToOrder} = useContext(OrderContext);
-    // onPress {() => addToCart}
+    
     return <>
     <View style={styles.content}>
         <FlatList
