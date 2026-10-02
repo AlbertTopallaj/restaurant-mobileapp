@@ -18,7 +18,7 @@ export const meals = [
             {
                 id: 3,
                 name: "Kebabtallrik med ris",
-                image: "../resources/meals/kebabtrallrik_med_ris.png",
+                image: "../resources/meals/kebabtallrik_med_ris.png",
                 content: "Kebab, ris, gurka, tomat, gullök, rödlök, feferoni, isbergssallad, mjöl",
                 price: 105,
             },
@@ -28,7 +28,7 @@ export const meals = [
         pizzas: [
             {
                 id: 4,
-                name: "Kebabapiza",
+                name: "Kebabpizza",
                 image: "../resources/meals/kebabpizza.png",
                 content: "Kebab, tomatsås, mjöl",
                 price: 115,
@@ -42,7 +42,7 @@ export const meals = [
             },
             {
                 id: 6,
-                name: "Kebabpizza med salad",
+                name: "Kebabpizza med sallad",
                 image: "../resources/meals/kebabpizza_med_salad.png",
                 content: "Kebab, tomatsås, mjöl, gurka, tomat, rödlök, feferoni, isbergssallad",
                 price: 125,
@@ -53,14 +53,14 @@ export const meals = [
         drinks: [
             {
                 id: 7,
-                name: "Pepsi-Max",
+                name: "Pepsi Max",
                 image: "../resources/meals/pepsi-max.png",
                 price: 17,
             },
             {
                 id: 8,
                 name: "Fanta Exotic",
-                image: "../resources/meals/fanta_exotic.png",
+                image: "../resources/meals/Fanta_Exotic.png",
                 price: 16,
             },
             {
@@ -77,7 +77,7 @@ export const meals = [
                 id: 10,
                 name: "Princesstårta",
                 image: "../resources/meals/princesstårta.png",
-                content: "Vetemjöl, ägg, grädde, vanilj extract, marsipan",
+                content: "Vetemjöl, ägg, grädde, vaniljextrakt, marsipan",
                 price: 100,
             },
             {
@@ -85,14 +85,14 @@ export const meals = [
                 name: "Chokladboll",
                 image: "../resources/meals/chokladboll.png",
                 content: "Smör, havregryn, kakao, koffein",
-                price: 10,
+                price: 20,
             },
             {
                 id: 12,
                 name: "Kladdkaka",
                 image: "../resources/meals/kladdkaka.png",
-                content: "Vetemjöl, ägg, smör, socker, med vispgrädde",
-                price: 20,
+                content: "Vetemjöl, ägg, smör, socker, vispgrädde",
+                price: 35,
             },
         ]
     },
@@ -114,4 +114,4 @@ export const meals = [
             },
         ]
     }
-]
+];

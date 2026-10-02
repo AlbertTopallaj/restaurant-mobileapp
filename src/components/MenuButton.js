@@ -7,7 +7,8 @@ export default function MenuButton({imagePath, name, navigateTo}) {
     const [textHeight, setTextHeight] = useState(0);
     return (
         <Pressable style={styles.menuButton}
-                   onPress={() => navigation.navigate(navigateTo)}>
+                   onPress={() => navigation.navigate(navigateTo, {
+                    category: name.toLowerCase()})}>
             <Image
                 source={imagePath}
                 style={[styles.menuButtonIcon,

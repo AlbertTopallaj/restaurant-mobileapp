@@ -20,9 +20,9 @@ export default function Home() {
                 Öppet:{"\n"}
                 Mån - Sön 09:00 - 02:30
             </Text>
-            <MenuButton imagePath={images.pizza} name={"Pizza"} navigateTo={"Home"}/>
-            <MenuButton imagePath={images.kebab} name={"Kebab"} navigateTo={"Home"}/>
-            <MenuButton imagePath={images.dryck} name={"Dryck"} navigateTo={"Home"}/>
+            <MenuButton imagePath={images.pizza} name={"Pizza"} navigateTo={"CategoryScreen"}/>
+            <MenuButton imagePath={images.kebab} name={"Kebab"} navigateTo={"CategoryScreen"}/>
+            <MenuButton imagePath={images.dryck} name={"Drink"} navigateTo={"CategoryScreen"}/>
         </View>
         <View style={styles.contentFooter}>
             <Text style={[styles.text, {color: "red"}]}>25% RABATT</Text>
