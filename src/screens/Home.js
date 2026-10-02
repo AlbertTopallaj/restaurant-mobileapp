@@ -11,7 +11,8 @@ export default function Home() {
         dryck: require("../resources/dryck.png")
     };
 
-    return <Order/>
+    return <> 
+    <Order/>
     <ImageBackground
         source={require("../resources/background-no-food.png")}
         style={styles.background}
@@ -31,5 +32,5 @@ export default function Home() {
         </View>
         <MapsButton />
     </ImageBackground>
-    
+    </>
 }
