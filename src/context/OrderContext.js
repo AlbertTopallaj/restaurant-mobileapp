@@ -19,7 +19,7 @@ function deleteMealFromOrder(meal) {
 }
 
 return (
-    <OrderContext.Provider value={{order, addMealToOrder, getTotalPrice}}>
+    <OrderContext.Provider value={{order, addMealToOrder, getTotalPrice, deleteMealFromOrder}}>
         {children}
     </OrderContext.Provider>
 )
