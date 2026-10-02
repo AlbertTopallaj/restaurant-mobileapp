@@ -47,7 +47,7 @@ export default function CategoryScreen({ route }) {
       source={require("../resources/background-no-food.png")}
       style={styles.background}
     >
-      <View style={{ paddingTop: 40, alignItems: "center" }}>
+      <View style={{ paddingTop: 120, alignItems: "center" }}>
         <Text style={[styles.pressableText, { fontSize: 40 }]}>
           {category.toUpperCase()}
         </Text>
