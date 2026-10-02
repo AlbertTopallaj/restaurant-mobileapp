@@ -1,6 +1,7 @@
 import { View, Text, FlatList, Image, ImageBackground } from "react-native";
 import { meals } from "../data/Meals";
 import { styles } from "../style";
+import { useOrder } from "../context/OrderContext";
 
 const mealImages = {
     "kebabrulle.png": require("../resources/meals/kebabrulle.png"),
