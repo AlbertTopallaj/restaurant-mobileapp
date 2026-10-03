@@ -40,7 +40,7 @@ export default function OrderList() {
           return (
             <View
               style={{
-                backgroundColor: "#ffffffcc",
+                backgroundColor: "transparent",
                 padding: 12,
                 borderRadius: 10,
                 marginVertical: 10,
