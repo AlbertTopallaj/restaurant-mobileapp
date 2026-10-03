@@ -1,5 +1,5 @@
 import { useOrder } from "../../../context/OrderContext";
-import { styles } from "../OrderList/OrderListStyle";
+import { styles } from "../../../style";
 import { View, Text, FlatList, Image } from "react-native";
 
 export default function OrderList() {
