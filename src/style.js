@@ -77,4 +77,13 @@ export const styles = StyleSheet.create({
     borderRadius: 50,
     padding: 10,
   },
+
+  orderHeader: {
+    fontSize: 25,
+    fontFamily: "serif",
+    fontWeight: "bold",
+    textAlign: "center",
+    letterSpacing: 2,
+    marginBottom: 10,
+  },
 });
