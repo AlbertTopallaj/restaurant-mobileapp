@@ -3,7 +3,7 @@ import { useNavigation } from "@react-navigation/native";
 import { View, Pressable } from "react-native";
 import { styles } from "../../style.js";
 
-export default function Header() {
+export default function OrderButtonDirector() {
   const navigation = useNavigation();
 
   return (

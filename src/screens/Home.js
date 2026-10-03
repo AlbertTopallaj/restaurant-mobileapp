@@ -19,7 +19,6 @@ export default function Home() {
         style={styles.background}
         resizeMode="cover"
       >
-        <Header />
         <View style={styles.content}>
           <Text style={styles.text}>
             Öppet:{"\n"}
