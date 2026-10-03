@@ -6,27 +6,27 @@ export default function OrderList() {
   const { order, deleteMealFromOrder } = useOrder();
 
   const mealImages = {
-    "kebabrulle.png": require("../../resources/meals/kebabrulle.png"),
-    "kebabtallrik_med_pommes.png": require("../../resources/meals/kebabtallrik_med_pommes.png"),
-    "kebabtallrik_med_ris.png": require("../../resources/meals/kebabtallrik_med_ris.png"),
+    "kebabrulle.png": require("../../../resources/meals/kebabrulle.png"),
+    "kebabtallrik_med_pommes.png": require("../../../resources/meals/kebabtallrik_med_pommes.png"),
+    "kebabtallrik_med_ris.png": require("../../../resources/meals/kebabtallrik_med_ris.png"),
 
-    "kebabpizza.png": require("../../resources/meals/kebabpizza.png"),
-    "hawaii.png": require("../../resources/meals/hawaii.png"),
+    "kebabpizza.png": require("../../../resources/meals/kebabpizza.png"),
+    "hawaii.png": require("../../../resources/meals/hawaii.png"),
 
-    "kebabpizza_med_salad.png": require("../../resources/meals/kebabpizza_med_salad.png"),
+    "kebabpizza_med_salad.png": require("../../../resources/meals/kebabpizza_med_salad.png"),
 
-    "pepsi-max.png": require("../../resources/meals/pepsi-max.png"),
+    "pepsi-max.png": require("../../../resources/meals/pepsi-max.png"),
 
-    "Fanta_Exotic.png": require("../../resources/meals/Fanta_Exotic.png"),
+    "Fanta_Exotic.png": require("../../../resources/meals/Fanta_Exotic.png"),
 
-    "coca_cola_zero.png": require("../../resources/meals/coca_cola_zero.png"),
+    "coca_cola_zero.png": require("../../../resources/meals/coca_cola_zero.png"),
 
-    "princesstårta.png": require("../../resources/meals/princesstårta.png"),
-    "chokladboll.png": require("../../resources/meals/chokladboll.png"),
-    "kladdkaka.png": require("../../resources/meals/kladdkaka.png"),
+    "princesstårta.png": require("../../../resources/meals/princesstårta.png"),
+    "chokladboll.png": require("../../../resources/meals/chokladboll.png"),
+    "kladdkaka.png": require("../../../resources/meals/kladdkaka.png"),
 
-    "hamburgare.png": require("../../resources/meals/hamburgare.png"),
-    "calzone.png": require("../../resources/meals/calzone.png"),
+    "hamburgare.png": require("../../../resources/meals/hamburgare.png"),
+    "calzone.png": require("../../../resources/meals/calzone.png"),
   };
 
   return (
