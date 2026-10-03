@@ -63,7 +63,7 @@ export default function CategoryScreen({ route }) {
               <Pressable onPress={() => addMealToOrder(item)}>
                 <View
                   style={{
-                    backgroundColor: "#ffffffcc",
+                    backgroundColor: "transparent",
                     padding: 12,
                     borderRadius: 10,
                     marginVertical: 10,
