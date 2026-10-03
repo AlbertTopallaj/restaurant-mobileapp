@@ -7,13 +7,13 @@ export default function Header() {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.header}>
-      <TouchableOpacity
+    <View style={styles.orderIcon}>
+      <Pressable
         style={styles.orderButton}
         onPress={() => navigation.navigate("Order")}
       >
-        <Ionicons name="restaurant-outline" size={32} color="white" />
-      </TouchableOpacity>
+        <Ionicons name="restaurant-outline" size={32} color="black" />
+      </Pressable>
     </View>
   );
 }

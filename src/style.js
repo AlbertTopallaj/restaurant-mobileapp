@@ -65,5 +65,9 @@ export const styles = StyleSheet.create({
     lineHeight: 25,
   },
 
-  orderButton: {},
+  orderButton: {
+    backgroundColor: "rgba(0,0,0,0.4)",
+    borderRadius: 50,
+    padding: 10,
+  },
 });
