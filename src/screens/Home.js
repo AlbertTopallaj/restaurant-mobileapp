@@ -26,11 +26,6 @@ export default function Home() {
             Mån - Sön 09:00 - 02:30
           </Text>
           <MenuButton
-            imagePath={images.order}
-            name={"Order"}
-            navigateTo={"Order"}
-          />
-          <MenuButton
             imagePath={images.pizza}
             name={"Pizza"}
             navigateTo={"CategoryScreen"}
