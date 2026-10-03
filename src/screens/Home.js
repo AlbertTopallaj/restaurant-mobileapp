@@ -3,6 +3,7 @@ import { styles } from "../style.js";
 import MenuButton from "../components/MenuButton";
 import MapsButton from "../components/MapsButton";
 import Ionicons from "@react-native-vector-icons/ionicons";
+import Header from "../components/Header.js";
 
 export default function Home() {
   const images = {
@@ -18,6 +19,7 @@ export default function Home() {
         style={styles.background}
         resizeMode="cover"
       >
+        <Header />
         <View style={styles.content}>
           <Text style={styles.text}>
             Öppet:{"\n"}
