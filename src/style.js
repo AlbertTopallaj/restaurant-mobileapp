@@ -65,8 +65,15 @@ export const styles = StyleSheet.create({
     lineHeight: 25,
   },
 
+  orderButtonLayout: {
+    position: "absolute",
+    top: 50,
+    right: 16,
+    zIndex: 10,
+  },
+
   orderButton: {
-    backgroundColor: "rgba(0,0,0,0.4)",
+    backgroundColor: "white",
     borderRadius: 50,
     padding: 10,
   },
