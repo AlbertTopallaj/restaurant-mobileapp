@@ -1,5 +1,5 @@
 import { Text } from "react-native";
-import { styles } from "../../style";
+import { styles } from "../OrderHeader/OrderHeaderStyle";
 
 export default function OrderHeader() {
   return (
