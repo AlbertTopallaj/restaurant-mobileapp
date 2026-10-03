@@ -1,7 +1,6 @@
 import { ImageBackground, Text, View } from "react-native";
 import { styles } from "../style.js";
 import MenuButton from "../components/MenuButton";
-import Order from "./Order.js";
 import MapsButton from "../components/MapsButton";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
