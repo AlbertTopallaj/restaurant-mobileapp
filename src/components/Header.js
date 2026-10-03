@@ -7,7 +7,7 @@ export default function Header() {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.orderIcon}>
+    <View style={styles.orderButtonLayout}>
       <Pressable
         style={styles.orderButton}
         onPress={() => navigation.navigate("Order")}
@@ -17,3 +17,4 @@ export default function Header() {
     </View>
   );
 }
+2;
