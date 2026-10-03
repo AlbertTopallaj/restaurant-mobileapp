@@ -1,3 +1,12 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({});
+export const styles = StyleSheet.create({
+  orderHeader: {
+    fontSize: 25,
+    fontFamily: "serif",
+    fontWeight: "bold",
+    textAlign: "center",
+    letterSpacing: 2,
+    marginBottom: 10,
+  },
+});
