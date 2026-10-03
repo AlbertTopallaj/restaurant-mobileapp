@@ -3,12 +3,9 @@ import OrderHeader from "../components/Order/OrderHeader";
 import OrderList from "../components/Order/OrderList";
 import { styles } from "../style";
 import { View, ImageBackground } from "react-native";
-import { useOrder } from "../context/OrderContext";
 import OrderTotalPrice from "../components/Order/OrderTotalPrice";
 
 export default function Order() {
-  const { order, addMealToOrder } = useOrder();
-
   return (
     <>
       <ImageBackground
