@@ -13,7 +13,7 @@ export default function OrderButton(){
 
     return <>
     <Pressable onPress={confirmOrder}>
-        <Text style={styles.pressableText}>Slutför beställning</Text>
+        <Text style={styles.}>Slutför beställning</Text>
     </Pressable>
     </>
 }

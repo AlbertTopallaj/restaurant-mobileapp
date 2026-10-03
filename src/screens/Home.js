@@ -2,7 +2,7 @@ import { ImageBackground, Text, View } from "react-native";
 import { styles } from "../style.js";
 import MenuButton from "../components/MenuButton";
 import MapsButton from "../components/MapsButton";
-import OrderButtonDirector from "../components/Order/OrderButtonDirector.js";
+import OrderButtonDirector from "../components/Order/OrderButtonDirector/OrderButtonDirector.js";
 
 export default function Home() {
   const images = {
