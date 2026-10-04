@@ -7,6 +7,6 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     letterSpacing: 2,
-    marginTop: 100,
+    // marginTop: 100,
   },
 });
