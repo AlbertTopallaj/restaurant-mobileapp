@@ -1,5 +1,4 @@
 import { useOrder } from "../../../context/OrderContext";
-import { styles } from "../../../style";
 import { orderStyles } from "../OrderList/OrderListStyle";
 import { View, Text, FlatList, Image } from "react-native";
 
@@ -31,10 +30,10 @@ export default function OrderList() {
   };
 
   return (
-    <View style={styles.content}>
+    <View style={orderStyles.orderListContainer}>
       <FlatList
         data={order}
-        style={orderStyles.flatList}
+        style={orderStyles.orderList}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item, index }) => {
           const cleanImageName = item.image.split("/").pop();

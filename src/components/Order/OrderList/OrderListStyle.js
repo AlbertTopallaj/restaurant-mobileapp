@@ -18,6 +18,11 @@ export const orderStyles = StyleSheet.create({
   },
 
   orderList: {
-    paddingTop: 100,
+    marginTop: 20,
+  },
+
+  orderListContainer: {
+    flex: 1,
+    width: "100%",
   },
 });
