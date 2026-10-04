@@ -1,5 +1,6 @@
 import { useOrder } from "../../../context/OrderContext";
 import { styles } from "../../../style";
+import { orderStyles } from "../OrderList/OrderListStyle";
 import { View, Text, FlatList, Image } from "react-native";
 
 export default function OrderList() {
@@ -76,8 +77,10 @@ export default function OrderList() {
           );
         }}
         ListEmptyComponent={
-          <View style={emptyOrderLayout}>
-            <Text style={styles.emptyOrderText}>Inga rätter har lagts in.</Text>
+          <View style={orderStyles.emptyOrderLayout}>
+            <Text style={orderStyles.emptyOrderText}>
+              Inga rätter har lagts in.
+            </Text>
           </View>
         }
       />

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({
+export const orderStyles = StyleSheet.create({
   emptyOrderLayout: {
     flexDirection: "row",
     alignItems: "center",
@@ -8,5 +8,12 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 30,
+  },
+
+  emptyOrderText: {
+    color: "white",
+    fontFamily: "serif",
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
