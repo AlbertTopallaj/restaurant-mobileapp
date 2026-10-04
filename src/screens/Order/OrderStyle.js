@@ -1,9 +1,12 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
   orderContent: {
     flex: 1,
-    alignItems: "space-between",
+    alignItems: "center",
     justifyContent: "space-between",
     paddingTop: 60,
     paddingBottom: 40,
