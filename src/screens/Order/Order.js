@@ -16,7 +16,7 @@ export default function Order() {
         <View style={styles.orderContent}>
           <OrderHeader />
           <OrderList />
-          <View style={{ width: "100%", alignItems: "center", gap: 10 }}>
+          <View style={{ width: "100%", alignItems: "center" }}>
             <OrderTotalPrice />
             <OrderButton />
           </View>
