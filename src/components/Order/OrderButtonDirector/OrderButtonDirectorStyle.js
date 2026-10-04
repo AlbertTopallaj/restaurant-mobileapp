@@ -7,4 +7,9 @@ export const styles = StyleSheet.create({
     right: 16,
     zIndex: 10,
   },
+  orderButton: {
+    backgroundColor: "rgba(0,0,0,0.6)",
+    borderRadius: 50,
+    padding: 10,
+  },
 });
