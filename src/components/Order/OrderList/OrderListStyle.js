@@ -17,7 +17,7 @@ export const orderStyles = StyleSheet.create({
     fontWeight: "bold",
   },
 
-  flatList: {
+  orderList: {
     paddingTop: 100,
   },
 });
