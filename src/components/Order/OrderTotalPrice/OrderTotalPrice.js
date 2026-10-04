@@ -8,7 +8,7 @@ export default function OrderTotalPrice() {
   return (
     <>
       <View>
-        <Text>Totalt: {getTotalPrice()}</Text>
+        <Text style={styles.totalPriceText}>Totalt: {getTotalPrice()}</Text>
       </View>
     </>
   );
