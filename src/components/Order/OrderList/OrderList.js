@@ -75,7 +75,11 @@ export default function OrderList() {
             </View>
           );
         }}
-        ListEmptyComponent={<Text>Inga rätter har lagts in.</Text>}
+        ListEmptyComponent={
+          <View style={emptyOrderLayout}>
+            <Text style={styles.emptyOrderText}>Inga rätter har lagts in.</Text>
+          </View>
+        }
       />
     </View>
   );

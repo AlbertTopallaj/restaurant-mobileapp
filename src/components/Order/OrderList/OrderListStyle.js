@@ -1,3 +1,12 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({});
+export const styles = StyleSheet.create({
+  emptyOrderLayout: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 30,
+  },
+});
