@@ -1,9 +1,9 @@
-import OrderButton from "../components/Order/OrderButton/OrderButton";
-import OrderHeader from "../components/Order/OrderHeader/OrderHeader";
-import OrderList from "../components/Order/OrderList/OrderList";
-import { styles } from "../style";
+import OrderButton from "../../components/Order/OrderButton/OrderButton";
+import OrderHeader from "../../components/Order/OrderHeader/OrderHeader";
+import OrderList from "../../components/Order/OrderList/OrderList";
+import { styles } from "../../style";
 import { View, ImageBackground } from "react-native";
-import OrderTotalPrice from "../components/Order/OrderTotalPrice/OrderTotalPrice";
+import OrderTotalPrice from "../../components/Order/OrderTotalPrice/OrderTotalPrice";
 
 export default function Order() {
   return (
