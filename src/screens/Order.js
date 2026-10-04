@@ -16,7 +16,6 @@ export default function Order() {
         <View style={styles.content}>
           <OrderHeader />
           <OrderList />
-          <View style={{ flex: 1 }} />
           <OrderTotalPrice />
           <OrderButton />
         </View>

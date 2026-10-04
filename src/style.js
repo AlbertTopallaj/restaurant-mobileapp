@@ -64,4 +64,10 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     lineHeight: 25,
   },
+
+  orderButton: {
+    backgroundColor: "white",
+    borderRadius: 50,
+    padding: 10,
+  },
 });
