@@ -34,6 +34,7 @@ export default function OrderList() {
     <View style={styles.content}>
       <FlatList
         data={order}
+        style={orderStyles.flatList}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item, index }) => {
           const cleanImageName = item.image.split("/").pop();
