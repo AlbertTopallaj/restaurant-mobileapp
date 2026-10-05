@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, ImageBackground } from "react-native";
+import { View, Text, FlatList, Image, ImageBackground, Pressable } from "react-native";
 import { meals } from "../data/Meals";
 import { styles } from "../style";
 
@@ -9,13 +9,10 @@ const mealImages = {
 
     "kebabpizza.png": require("../resources/meals/kebabpizza.png"),
     "hawaii.png": require("../resources/meals/hawaii.png"),
-
     "kebabpizza_med_salad.png": require("../resources/meals/kebabpizza_med_salad.png"),
 
     "pepsi-max.png": require("../resources/meals/pepsi-max.png"),
-
     "Fanta_Exotic.png": require("../resources/meals/Fanta_Exotic.png"),
-
     "coca_cola_zero.png": require("../resources/meals/coca_cola_zero.png"),
 
     "princesstårta.png": require("../resources/meals/princesstårta.png"),
@@ -26,7 +23,7 @@ const mealImages = {
     "calzone.png": require("../resources/meals/calzone.png"),
 };
 
-export default function CategoryScreen({ route }) {
+export default function CategoryScreen({ route, navigation }) {
 
     const category = route.params.category;
 
@@ -37,7 +34,7 @@ export default function CategoryScreen({ route }) {
             source={require("../resources/background-no-food.png")}
             style={styles.background}
         >
-            <View style={{ paddingTop: 40, alignItems: "center" }}>
+            <View style={{ paddingTop: 120, alignItems: "center" }}>
                 
                 <Text style={[styles.pressableText, { fontSize: 40 }]}>
                     {category.toUpperCase()}
@@ -52,43 +49,53 @@ export default function CategoryScreen({ route }) {
                         const cleanImageName = item.image.split("/").pop();
 
                         return (
-                            <View
-                                style={{
-                                    backgroundColor: "#ffffffcc",
-                                    padding: 12,
-                                    borderRadius: 10,
-                                    marginVertical: 10,
-                                    width: "80%",
-                                    alignSelf: "center",
-                                    flexDirection: "row",
-                                    alignItems: "center",
-                                    gap: 20
-                                }}
+                            <Pressable
+                                onPress={() =>
+                                    navigation.navigate("ProductInfo", {
+                                        product: {
+                                            ...item,
+                                            image: mealImages[cleanImageName], // skickar rätt bild
+                                        }
+                                    })
+                                }
                             >
-                                <Image
-                                    source={mealImages[cleanImageName]}
-                                    style={{ width: 80, height: 80, borderRadius: 8 }}
-                                />
-
-                                <View style={{ flexShrink: 1 }}>
-                                <Text
+                                <View
                                     style={{
-                                        fontSize: 18,
-                                        fontFamily: "serif",
-                                        fontWeight: "bold",
-                                        flexWrap: "wrap",
-                                        maxWidth: 180,   
+                                        backgroundColor: "#ffffffcc",
+                                        padding: 12,
+                                        borderRadius: 10,
+                                        marginVertical: 10,
+                                        width: "80%",
+                                        alignSelf: "center",
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        gap: 20
                                     }}
                                 >
-                                    {item.name}
-                                </Text>
+                                    <Image
+                                        source={mealImages[cleanImageName]}
+                                        style={{ width: 80, height: 80, borderRadius: 8 }}
+                                    />
 
-                                <Text style={{ fontSize: 16 }}>
-                                    {item.price ? `${item.price} kr` : "Pris saknas"}
-                                </Text>
-                            </View>
+                                    <View style={{ flexShrink: 1 }}>
+                                        <Text
+                                            style={{
+                                                fontSize: 18,
+                                                fontFamily: "serif",
+                                                fontWeight: "bold",
+                                                flexWrap: "wrap",
+                                                maxWidth: 180,   
+                                            }}
+                                        >
+                                            {item.name}
+                                        </Text>
 
-                            </View>
+                                        <Text style={{ fontSize: 16 }}>
+                                            {item.price ? `${item.price} kr` : "Pris saknas"}
+                                        </Text>
+                                    </View>
+                                </View>
+                            </Pressable>
                         );
                     }}
                 />
