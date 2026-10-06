@@ -6,8 +6,10 @@ export default function OrderButton() {
   const { order, placeOrder } = useOrder();
 
   function confirmOrder() {
-    if (order.length === 0) return;
-    placeOrder();
+    if (order.length === 0) {
+    } else {
+      placeOrder();
+    }
   }
 
   return (
