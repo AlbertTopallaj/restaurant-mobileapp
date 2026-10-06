@@ -1,6 +1,6 @@
 import Ionicons from "@react-native-vector-icons/ionicons";
-import { styles } from "./AddMealToOrderButtonstyle";
-import { Pressable } from "react-native";
+import { styles } from "../AddMealToOrderButton/AddMealToOrderButtonStyle";
+import { Pressable, View } from "react-native";
 
 export default function AddMealToOrderButton() {
   return (
@@ -13,7 +13,7 @@ export default function AddMealToOrderButton() {
           <Ionicons
             name="add-circle-outline"
             size={24}
-            color={black}
+            color="white"
           ></Ionicons>
         </Pressable>
       </View>
