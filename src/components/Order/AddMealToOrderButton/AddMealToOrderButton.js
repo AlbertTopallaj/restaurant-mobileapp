@@ -1,7 +1,10 @@
+import { styles } from "./AddMealToOrderButtonstyle";
+import { Pressable } from "react-native";
+
 export default function AddMealToOrderButton() {
   return (
     <>
-      <Pressable></Pressable>
+      <Pressable style={styles.button}></Pressable>
     </>
   );
 }
