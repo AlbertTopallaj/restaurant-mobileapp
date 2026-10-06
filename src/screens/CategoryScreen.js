@@ -8,8 +8,6 @@ import {
 } from "react-native";
 import { meals } from "../data/Meals";
 import { styles } from "../style";
-import { useOrder } from "../context/OrderContext";
-import OrderButtonDirector from "../components/Order/OrderButtonDirector/OrderButtonDirector";
 
 const mealImages = {
   "kebabrulle.png": require("../resources/meals/kebabrulle.png"),
@@ -18,13 +16,10 @@ const mealImages = {
 
   "kebabpizza.png": require("../resources/meals/kebabpizza.png"),
   "hawaii.png": require("../resources/meals/hawaii.png"),
-
   "kebabpizza_med_salad.png": require("../resources/meals/kebabpizza_med_salad.png"),
 
   "pepsi-max.png": require("../resources/meals/pepsi-max.png"),
-
   "Fanta_Exotic.png": require("../resources/meals/Fanta_Exotic.png"),
-
   "coca_cola_zero.png": require("../resources/meals/coca_cola_zero.png"),
 
   "princesstårta.png": require("../resources/meals/princesstårta.png"),
@@ -35,9 +30,7 @@ const mealImages = {
   "calzone.png": require("../resources/meals/calzone.png"),
 };
 
-export default function CategoryScreen({ route }) {
-  const { addMealToOrder } = useOrder();
-
+export default function CategoryScreen({ route, navigation }) {
   const category = route.params.category;
 
   const selectedMeals =
@@ -48,7 +41,6 @@ export default function CategoryScreen({ route }) {
       source={require("../resources/background-no-food.png")}
       style={styles.background}
     >
-      <OrderButtonDirector />
       <View style={{ paddingTop: 120, alignItems: "center" }}>
         <Text style={[styles.pressableText, { fontSize: 40 }]}>
           {category.toUpperCase()}
@@ -61,11 +53,25 @@ export default function CategoryScreen({ route }) {
           renderItem={({ item }) => {
             const cleanImageName = item.image.split("/").pop();
 
+            <Image
+              source={mealImages[cleanImageName]}
+              style={{ width: 80, height: 80, borderRadius: 8 }}
+            />;
+
             return (
-              <Pressable onPress={() => addMealToOrder(item)}>
+              <Pressable
+                onPress={() =>
+                  navigation.navigate("ProductInfo", {
+                    product: {
+                      ...item,
+                      image: mealImages[cleanImageName], // skickar rätt bild
+                    },
+                  })
+                }
+              >
                 <View
                   style={{
-                    backgroundColor: "transparent",
+                    backgroundColor: "#ffffffcc",
                     padding: 12,
                     borderRadius: 10,
                     marginVertical: 10,
@@ -76,11 +82,6 @@ export default function CategoryScreen({ route }) {
                     gap: 20,
                   }}
                 >
-                  <Image
-                    source={mealImages[cleanImageName]}
-                    style={{ width: 80, height: 80, borderRadius: 8 }}
-                  />
-
                   <View style={{ flexShrink: 1 }}>
                     <Text
                       style={{
