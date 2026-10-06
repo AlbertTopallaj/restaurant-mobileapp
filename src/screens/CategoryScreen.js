@@ -53,11 +53,6 @@ export default function CategoryScreen({ route, navigation }) {
           renderItem={({ item }) => {
             const cleanImageName = item.image.split("/").pop();
 
-            <Image
-              source={mealImages[cleanImageName]}
-              style={{ width: 80, height: 80, borderRadius: 8 }}
-            />;
-
             return (
               <Pressable
                 onPress={() =>
@@ -82,6 +77,11 @@ export default function CategoryScreen({ route, navigation }) {
                     gap: 20,
                   }}
                 >
+                  <Image
+                    source={mealImages[cleanImageName]}
+                    style={{ width: 80, height: 80, borderRadius: 8 }}
+                  />
+
                   <View style={{ flexShrink: 1 }}>
                     <Text
                       style={{

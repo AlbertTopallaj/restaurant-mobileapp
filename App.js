@@ -19,6 +19,7 @@ export default function App() {
               title: "Startsida",
             }}
           />
+
           <Stack.Screen
             name="Order"
             component={Order}
