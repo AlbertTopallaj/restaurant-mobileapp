@@ -1,8 +1,28 @@
 import { View, Text, Image, ImageBackground, ScrollView } from "react-native";
 import { styles } from "../style";
+import {useState, useEffect} from "react";
+import StarRating from "../components/StarRating.js";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 
 export default function ProductInfo({ route }) {
     const { product } = route.params;
+    const [rating, setRating] = useState(0);
+
+    const saveRating = async (n) => {
+        setRating(n);
+        await AsyncStorage.setItem(`rating_${product.id}`, n.toString());
+    }
+
+    useEffect(() => {
+        const loadRating = async () => {
+            const savedRating = await AsyncStorage.getItem(`rating_${product.id}`);
+            if (savedRating !== null) {
+                setRating(Number(savedRating));
+            }
+        }
+        loadRating();
+    }, []);
 
     return (
         <ImageBackground
@@ -45,6 +65,7 @@ export default function ProductInfo({ route }) {
                         {product.content}
                     </Text>
                 )}
+           <StarRating key={rating} start={rating} onChange={saveRating}/>
             </ScrollView>
         </ImageBackground>
     );
