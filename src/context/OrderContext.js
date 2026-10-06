@@ -27,7 +27,13 @@ export function OrderProvider({ children }) {
 
   return (
     <OrderContext.Provider
-      value={{ order, addMealToOrder, getTotalPrice, deleteMealFromOrder }}
+      value={{
+        order,
+        addMealToOrder,
+        getTotalPrice,
+        deleteMealFromOrder,
+        placeOrder,
+      }}
     >
       {children}
     </OrderContext.Provider>

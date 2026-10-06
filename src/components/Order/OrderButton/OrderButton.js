@@ -3,7 +3,7 @@ import { styles } from "../../../components/Order/OrderButton/OrderButtonStyle";
 import { useOrder } from "../../../context/OrderContext";
 
 export default function OrderButton() {
-  const { order, setOrder } = useOrder();
+  const { order, placeOrder } = useOrder();
 
   function confirmOrder() {
     if (order.length === 0) return;
