@@ -3,10 +3,10 @@ import { styles } from "../../../components/Order/OrderButton/OrderButtonStyle";
 import { useOrder } from "../../../context/OrderContext";
 
 export default function OrderButton() {
-  const { meals, placeOrder } = useOrder();
+  const { order } = useOrder();
 
   function confirmOrder() {
-    if (meals.length === 0) return;
+    if (order.length === 0) return;
 
     placeOrder();
   }

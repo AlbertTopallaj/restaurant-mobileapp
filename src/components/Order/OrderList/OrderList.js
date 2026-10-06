@@ -36,7 +36,6 @@ export default function OrderList() {
         style={orderStyles.orderList}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item, index }) => {
-          const cleanImageName = item.image.split("/").pop();
           return (
             <View
               style={{
@@ -52,7 +51,7 @@ export default function OrderList() {
               }}
             >
               <Image
-                source={mealImages[cleanImageName]}
+                source={item.image}
                 style={{ width: 80, height: 80, borderRadius: 8 }}
               />
 

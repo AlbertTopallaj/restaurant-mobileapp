@@ -29,7 +29,7 @@ export default function ProductInfo({ route }) {
       source={require("../resources/background-no-food.png")}
       style={styles.background}
     >
-      <AddMealToOrderButton />
+      <AddMealToOrderButton meal={product} />
       <View style={{ paddingTop: 50, alignItems: "center" }}></View>
       <ScrollView
         contentContainerStyle={{ padding: 110, alignItems: "center" }}
