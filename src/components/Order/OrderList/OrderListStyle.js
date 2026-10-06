@@ -11,7 +11,7 @@ export const orderStyles = StyleSheet.create({
   },
 
   emptyOrderText: {
-    color: "white",
+    color: "black",
     fontFamily: "serif",
     fontSize: 16,
     fontWeight: "bold",
@@ -24,5 +24,9 @@ export const orderStyles = StyleSheet.create({
   orderListContainer: {
     flex: 1,
     width: "100%",
+  },
+
+  deleteButton: {
+    marginLeft: "auto",
   },
 });

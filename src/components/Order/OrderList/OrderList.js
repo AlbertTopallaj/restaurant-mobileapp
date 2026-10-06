@@ -1,6 +1,7 @@
+import Ionicons from "@react-native-vector-icons/ionicons";
 import { useOrder } from "../../../context/OrderContext";
 import { orderStyles } from "../OrderList/OrderListStyle";
-import { View, Text, FlatList, Image } from "react-native";
+import { View, Text, FlatList, Image, Pressable } from "react-native";
 
 export default function OrderList() {
   const { order, deleteMealFromOrder } = useOrder();
@@ -36,7 +37,6 @@ export default function OrderList() {
         style={orderStyles.orderList}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item, index }) => {
-          const cleanImageName = item.image.split("/").pop();
           return (
             <View
               style={{
@@ -52,7 +52,7 @@ export default function OrderList() {
               }}
             >
               <Image
-                source={mealImages[cleanImageName]}
+                source={item.image}
                 style={{ width: 80, height: 80, borderRadius: 8 }}
               />
 
@@ -73,6 +73,13 @@ export default function OrderList() {
                   {item.price ? `${item.price} kr` : "Pris saknas"}
                 </Text>
               </View>
+              <Pressable style={orderStyles.deleteButton}>
+                <Ionicons
+                  name="close-outline"
+                  size={35}
+                  onPress={() => deleteMealFromOrder(index)}
+                ></Ionicons>
+              </Pressable>
             </View>
           );
         }}
