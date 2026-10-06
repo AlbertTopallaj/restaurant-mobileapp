@@ -1,6 +1,8 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./src/screens/Home";
+import Order from "./src/screens/Order/Order";
+import { OrderProvider } from "./src/context/OrderContext";
 import CategoryScreen from "./src/screens/CategoryScreen";
 import { useEffect, useState } from "react";
 import { Asset } from "expo-asset";
@@ -33,29 +35,36 @@ export default function App() {
 
   // If the pictures are not ready, return null
   if (!ready) return null;
-
+  
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{
-            title: "Startsida",
-          }}
-        />
+    <OrderProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              title: "Startsida",
+            }}
+          />
 
-        <Stack.Screen
-          name="CategoryScreen"
-          component={CategoryScreen}
-          options={{ title: "Meny" }}
-      />
+          <Stack.Screen
+            name="Order"
+            component={Order}
+            options={{
+              title: "Beställ",
+            }}
+          />
 
-      <Stack.Screen 
-          name="ProductInfo"
-          component={ProductInfo} 
-      />
+          <Stack.Screen
+            name="CategoryScreen"
+            component={CategoryScreen}
+            options={{ title: "Meny" }}
+          />
 
-    </Stack.Navigator>
-  </NavigationContainer>;
+          <Stack.Screen name="ProductInfo" component={ProductInfo} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </OrderProvider>
+  );
 }
