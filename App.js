@@ -4,6 +4,7 @@ import Home from "./src/screens/Home";
 import CategoryScreen from "./src/screens/CategoryScreen";
 import { useEffect, useState } from "react";
 import { Asset } from "expo-asset";
+import ProductInfo from "./src/screens/ProductInfo";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -48,8 +49,13 @@ export default function App() {
           name="CategoryScreen"
           component={CategoryScreen}
           options={{ title: "Meny" }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+      />
+
+      <Stack.Screen 
+          name="ProductInfo"
+          component={ProductInfo} 
+      />
+
+    </Stack.Navigator>
+  </NavigationContainer>;
 }
