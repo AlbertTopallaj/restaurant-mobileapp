@@ -1,4 +1,5 @@
 import { Text } from "react-native";
+import { styles } from "../Toast/ToastStyle";
 
 export default function Toast({ message, visible }) {
   if (!visible) {
@@ -8,7 +9,9 @@ export default function Toast({ message, visible }) {
 
   return (
     <>
-      <Text>{message}</Text>
+      <View>
+        <Text>{message}</Text>
+      </View>
     </>
   );
 }
