@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import { styles } from "../Toast/ToastStyle";
 
 export default function Toast({ message, visible }) {
