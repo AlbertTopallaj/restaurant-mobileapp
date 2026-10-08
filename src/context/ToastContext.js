@@ -10,4 +10,16 @@ export function ToastProvider({ children }) {
             setVisible(false);
         }, 3000);
     }
+
+    return (
+    <ToastContext.Provider value={{ showToast }}>
+        {children}
+
+        <Toast message={message} visible={visible}/>
+    </ToastContext.Provider>
+    )
 }
+
+    export function useToast() {
+        return useContext(ToastContext);
+    }
