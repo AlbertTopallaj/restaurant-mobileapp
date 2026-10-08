@@ -16,7 +16,12 @@ export default function AddMealToOrderButton({ meal }) {
   return (
     <>
       <View style={styles.buttonLayout}>
-        <Pressable style={styles.button} onPress={() => addMealToOrder(meal)}>
+        <Pressable
+          style={styles.button}
+          onPress={() => {
+            handleAddMeal;
+          }}
+        >
           <Ionicons
             name="add-circle-outline"
             size={32}
