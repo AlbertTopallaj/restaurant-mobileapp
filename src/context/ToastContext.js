@@ -8,7 +8,7 @@ export function ToastProvider({ children }) {
     const [message, setMessage] = useState("");
     const [type, setType] = useState("");
 
-    function showToast(message, type) {
+    function showToast(message, type = "info") {
         setMessage(message);
         setType(type);
         setVisible(true);
