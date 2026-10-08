@@ -6,9 +6,11 @@ const ToastContext = createContext();
 export function ToastProvider({ children }) {
     const [visible, setVisible] = useState(false);
     const [message, setMessage] = useState("");
+    const [type, setType] = useState("");
 
     function showToast(message) {
         setMessage(message);
+        setType(type);
         setVisible(true);
 
         setTimeout(() => {
@@ -20,7 +22,7 @@ export function ToastProvider({ children }) {
     <ToastContext.Provider value={{ showToast }}>
         {children}
 
-        <Toast message={message} visible={visible}/>
+        <Toast message={message} visible={visible} type={type}/>
     </ToastContext.Provider>
     )
 }
