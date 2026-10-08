@@ -7,6 +7,7 @@ import CategoryScreen from "./src/screens/CategoryScreen";
 import { useEffect, useState } from "react";
 import { Asset } from "expo-asset";
 import ProductInfo from "./src/screens/ProductInfo";
+import { ToastProvider } from "./src/context/ToastContext";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -35,36 +36,38 @@ export default function App() {
 
   // If the pictures are not ready, return null
   if (!ready) return null;
-  
+
   return (
-    <OrderProvider>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{
-              title: "Startsida",
-            }}
-          />
+    <ToastProvider>
+      <OrderProvider>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Home"
+              component={Home}
+              options={{
+                title: "Startsida",
+              }}
+            />
 
-          <Stack.Screen
-            name="Order"
-            component={Order}
-            options={{
-              title: "Beställ",
-            }}
-          />
+            <Stack.Screen
+              name="Order"
+              component={Order}
+              options={{
+                title: "Beställ",
+              }}
+            />
 
-          <Stack.Screen
-            name="CategoryScreen"
-            component={CategoryScreen}
-            options={{ title: "Meny" }}
-          />
+            <Stack.Screen
+              name="CategoryScreen"
+              component={CategoryScreen}
+              options={{ title: "Meny" }}
+            />
 
-          <Stack.Screen name="ProductInfo" component={ProductInfo} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </OrderProvider>
+            <Stack.Screen name="ProductInfo" component={ProductInfo} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </OrderProvider>
+    </ToastProvider>
   );
 }
