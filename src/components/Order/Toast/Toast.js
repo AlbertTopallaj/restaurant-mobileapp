@@ -9,8 +9,11 @@ export default function Toast({ message, visible }) {
 
   return (
     <>
-      <View>
-        <Text>{message}</Text>
+      <View style={styles.container}>
+        <View style={styles.toast}>
+          <Text style={styles.icon}></Text>
+        <Text style={styles.message}>{message}</Text>
+      </View>
       </View>
     </>
   );
