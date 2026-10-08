@@ -14,7 +14,7 @@ export default function OrderSuccessModal({ visible, onClose }) {
             <View style={styles.overlay}>
                 <View style={styles.modal}>
                     <Ionicons
-                    name="checkmark"
+                    name="checkmark-circle"
                     size={64}
                     color="#4CAF50"
                     />
