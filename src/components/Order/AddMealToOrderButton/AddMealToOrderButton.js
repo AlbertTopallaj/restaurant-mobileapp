@@ -8,6 +8,11 @@ export default function AddMealToOrderButton({ meal }) {
   const { addMealToOrder } = useOrder();
   const { showToast } = useToast();
 
+  function handleAddMeal() {
+    addMealToOrder(meal);
+    showToast("Rätten lades till i beställningen");
+  }
+
   return (
     <>
       <View style={styles.buttonLayout}>
