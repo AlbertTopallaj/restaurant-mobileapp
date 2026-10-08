@@ -34,6 +34,12 @@ export const styles = StyleSheet.create({
     },
     message: {
         fontSize: 15,
+        color: "#555555",
+        textAlign: "center",
+        lineHeight: 23,
+    },
+    time: {
+        fontSize: 15,
         fontWeight: "600",
         color: "#333333",
         marginTop: 20,
@@ -42,7 +48,7 @@ export const styles = StyleSheet.create({
 
     button: {
         width: "100%",
-        backgroundColor: "4CAF50",
+        backgroundColor: "#4CAF50",
         paddingVertical: 15,
         paddingHorizontal: 16,
         borderRadius: 12,
