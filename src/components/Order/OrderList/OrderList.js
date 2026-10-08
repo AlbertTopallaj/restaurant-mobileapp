@@ -1,10 +1,12 @@
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { useOrder } from "../../../context/OrderContext";
+import { useToast } from "../../../context/ToastContext";
 import { orderStyles } from "../OrderList/OrderListStyle";
 import { View, Text, FlatList, Image, Pressable } from "react-native";
 
 export default function OrderList() {
   const { order, deleteMealFromOrder } = useOrder();
+  const { showToast } = useToast();
 
   const mealImages = {
     "kebabrulle.png": require("../../../resources/meals/kebabrulle.png"),
@@ -29,6 +31,11 @@ export default function OrderList() {
     "hamburgare.png": require("../../../resources/meals/hamburgare.png"),
     "calzone.png": require("../../../resources/meals/calzone.png"),
   };
+
+  function handleDeleteMealFromOrder(index){
+    deleteMealFromOrder(index);
+    showToast("Maträtten togs bort från beställningen", "success");
+  }
 
   return (
     <View style={orderStyles.orderListContainer}>
@@ -77,7 +84,7 @@ export default function OrderList() {
                 <Ionicons
                   name="close-outline"
                   size={35}
-                  onPress={() => deleteMealFromOrder(index)}
+                  onPress={() => handleDeleteMealFromOrder(index)}
                 ></Ionicons>
               </Pressable>
             </View>
