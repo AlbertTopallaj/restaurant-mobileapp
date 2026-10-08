@@ -1,13 +1,14 @@
 import { Pressable, Text } from "react-native";
 import { styles } from "../../../components/Order/OrderButton/OrderButtonStyle";
 import { useOrder } from "../../../context/OrderContext";
-import Toast from "../Toast/Toast";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useToast } from "../../../context/ToastContext";
+import OrderSuccessModal from "../OrderSuccessModal/OrderSuccessModal";
 
 export default function OrderButton() {
   const { order, placeOrder } = useOrder();
   const { showToast } = useToast();
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   function confirmOrder() {
    if (order.length === 0) {
@@ -18,11 +19,7 @@ export default function OrderButton() {
     return;
    }
    placeOrder();
-
-   showToast(
-    "Beställningen lyckades. Beställningen är färdig om 15 minuter",
-    "success"
-   );
+   setShowSuccessModal(true);
   }
 
   return (
@@ -30,6 +27,11 @@ export default function OrderButton() {
       <Pressable style={styles.confirmOrderButton} onPress={confirmOrder}>
         <Text style={styles.confirmOrderText}>Slutför beställning</Text>
       </Pressable>
+
+      <OrderSuccessModal
+      visible={showSuccessModal}
+      onClose={() => setShowSuccessModal(false)}
+      />
     </>
   );
 }

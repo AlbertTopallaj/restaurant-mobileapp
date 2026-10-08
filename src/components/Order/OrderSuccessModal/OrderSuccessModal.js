@@ -1,7 +1,6 @@
 import Ionicons from "@react-native-vector-icons/ionicons";
-import { Pressable } from "react-native";
-import { View } from "react-native";
-import { Modal } from "react-native";
+import { View, Text, Modal, Pressable } from "react-native";
+import { styles } from "./OrderSuccessModalStyle";
 
 export default function OrderSuccessModal({ visible, onClose }) {
     return (
