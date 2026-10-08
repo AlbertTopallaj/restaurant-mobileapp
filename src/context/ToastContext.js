@@ -1,6 +1,8 @@
 import { createContext, useContext, useState } from "react";
 import Toast from "../components/Order/Toast/Toast";
 
+const ToastContext = createContext();
+
 export function ToastProvider({ children }) {
     const [visible, setVisible] = useState(false);
     const [message, setMessage] = useState("");
