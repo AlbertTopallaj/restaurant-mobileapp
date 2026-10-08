@@ -2,7 +2,11 @@ import { Text, View } from "react-native";
 import { styles } from "../Toast/ToastStyle";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
-export default function Toast({ message, visible, type }) {
+export default function Toast({ message, type, visible }) {
+  if(!visible) {
+    return null;
+  }
+
 
   let iconName;
   let iconColor;
@@ -28,7 +32,7 @@ export default function Toast({ message, visible, type }) {
           size={24}
           color={iconColor}
           />
-          
+
         <Text style={styles.message}>{message}</Text>
       </View>
       </View>
