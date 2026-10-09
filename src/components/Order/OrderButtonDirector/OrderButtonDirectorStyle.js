@@ -8,8 +8,8 @@ export const styles = StyleSheet.create({
     zIndex: 10,
   },
   orderButton: {
-    backgroundColor: "rgba(0,0,0,0.6)",
+    backgroundColor: "#E7E7E7",
     borderRadius: 50,
-    padding: 10,
-  },
+    padding: 12,
+  }
 });

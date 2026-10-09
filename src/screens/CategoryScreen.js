@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import { meals } from "../data/Meals";
 import { styles } from "../style";
+import OrderButtonDirector from "../components/Order/OrderButtonDirector/OrderButtonDirector"
 
 const mealImages = {
   "kebabrulle.png": require("../resources/meals/kebabrulle.png"),
@@ -41,6 +42,7 @@ export default function CategoryScreen({ route, navigation }) {
       source={require("../resources/background-no-food.png")}
       style={styles.background}
     >
+      <OrderButtonDirector/>
       <View style={{ paddingTop: 120, alignItems: "center" }}>
         <Text style={[styles.pressableText, { fontSize: 40 }]}>
           {category.toUpperCase()}
