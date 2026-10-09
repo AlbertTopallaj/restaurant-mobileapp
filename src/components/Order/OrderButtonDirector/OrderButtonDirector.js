@@ -12,7 +12,7 @@ export default function OrderButtonDirector() {
         style={styles.orderButton}
         onPress={() => navigation.navigate("Order")}
       >
-        <Ionicons name="restaurant-outline" size={32} color="white" />
+        <Ionicons name="restaurant-outline" size={32} color="black" />
       </Pressable>
     </View>
   );
