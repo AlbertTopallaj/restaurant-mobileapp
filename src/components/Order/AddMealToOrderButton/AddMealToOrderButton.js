@@ -1,5 +1,5 @@
 import Ionicons from "@react-native-vector-icons/ionicons";
-import { styles } from "../AddMealToOrderButton/AddMealToOrderButtonStyle"
+import { styles } from "../AddMealToOrderButton/AddMealToOrderButtonStyle";
 import { Pressable, View } from "react-native";
 import { useOrder } from "../../../context/OrderContext";
 import { useToast } from "../../../context/ToastContext";
