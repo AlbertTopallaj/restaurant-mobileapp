@@ -10,7 +10,7 @@ export default function AddMealToOrderButton({ meal }) {
 
   function handleAddMeal() {
     addMealToOrder(meal);
-    showToast("Rätten lades till i beställningen", "success");
+    showToast("Produkten lades till i beställningen", "success");
   }
 
   return (
