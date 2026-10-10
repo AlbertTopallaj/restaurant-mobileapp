@@ -26,11 +26,12 @@ export default function Toast({ message, type, visible }) {
   return (
     <>
       <View style={styles.container}>
-        <View style={styles.toast}>
+        <View accessible={true} accessibilityRole="alert" style={styles.toast}>
           <Ionicons
           name={iconName}
           size={24}
           color={iconColor}
+          accessible={false}
           />
 
         <Text style={styles.message}>{message}</Text>
