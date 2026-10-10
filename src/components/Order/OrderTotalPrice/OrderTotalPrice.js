@@ -8,7 +8,7 @@ export default function OrderTotalPrice() {
   return (
     <>
       <View>
-        <Text style={styles.totalPriceText}>Totalt: {getTotalPrice()} kr</Text>
+        <Text accessibilityLabel={`Totala priset för din beställning är ${getTotalPrice()} kr`} style={styles.totalPriceText}>Totalt: {getTotalPrice()} kr</Text>
       </View>
     </>
   );
