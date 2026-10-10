@@ -9,32 +9,38 @@ export default function OrderSuccessModal({ visible, onClose }) {
         transparent
         animationType="fade"
         onRequestClose={onClose}
+        accessibilityViewIsModal={true}
         >
             <View style={styles.overlay}>
-                <View style={styles.modal}>
+                <View accessible={true} accessibilityRole="alert" style={styles.modal}>
                     <Ionicons
                     name="checkmark-circle"
                     size={64}
                     color="#4CAF50"
+                    accessible={false}
                     />
 
-                    <Text style={styles.title}>
+                    <Text accessible={true} style={styles.title}>
                         Beställningen är gjord!
                     </Text>
 
-                    <Text style={styles.message}>
+                    <Text accessible={true} style={styles.message}>
                         Tack för din beställning hos oss på Sunket. Vi förbereder din mat med extra kärlek.
                     </Text>
 
-                    <Text style={styles.time}>
+                    <Text accessible={true} style={styles.time}>
                         Beräknad väntetid: 15 minuter
                     </Text>
 
                     <Pressable
                     style={styles.button}
                     onPress={onClose}
+                    accessible={true}
+                    accessibilityRole="button"
+                    accessibilityLabel="Tillbaka till menyn"
+                    accessibilityHint="Stänger bekräftelsemodalen"
                     >
-                    <Text style={styles.buttonText}>
+                    <Text accessible={true} style={styles.buttonText}>
                         Tillbaka till menyn
                     </Text>
                     </Pressable>
