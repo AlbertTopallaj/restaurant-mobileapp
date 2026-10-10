@@ -20,15 +20,15 @@ export default function OrderSuccessModal({ visible, onClose }) {
                     accessible={false}
                     />
 
-                    <Text accessible={true} style={styles.title}>
+                    <Text style={styles.title}>
                         Beställningen är gjord!
                     </Text>
 
-                    <Text accessible={true} style={styles.message}>
+                    <Text style={styles.message}>
                         Tack för din beställning hos oss på Sunket. Vi förbereder din mat med extra kärlek.
                     </Text>
 
-                    <Text accessible={true} style={styles.time}>
+                    <Text style={styles.time}>
                         Beräknad väntetid: 15 minuter
                     </Text>
 
@@ -40,7 +40,7 @@ export default function OrderSuccessModal({ visible, onClose }) {
                     accessibilityLabel="Tillbaka till menyn"
                     accessibilityHint="Stänger bekräftelsemodalen"
                     >
-                    <Text accessible={true} style={styles.buttonText}>
+                    <Text style={styles.buttonText}>
                         Tillbaka till menyn
                     </Text>
                     </Pressable>
