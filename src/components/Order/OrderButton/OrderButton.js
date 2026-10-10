@@ -24,7 +24,7 @@ export default function OrderButton() {
 
   return (
     <>
-      <Pressable style={styles.confirmOrderButton} onPress={confirmOrder}>
+      <Pressable accessibilityLabel="Slutför beställning" accessibilityHint="Skickar din beställning" style={styles.confirmOrderButton} onPress={confirmOrder}>
         <Text style={styles.confirmOrderText}>Slutför beställning</Text>
       </Pressable>
 
