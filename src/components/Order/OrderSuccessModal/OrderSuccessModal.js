@@ -9,13 +9,15 @@ export default function OrderSuccessModal({ visible, onClose }) {
         transparent
         animationType="fade"
         onRequestClose={onClose}
+        accessibilityViewIsModal={true}
         >
             <View style={styles.overlay}>
-                <View style={styles.modal}>
+                <View accessible={true} accessibilityRole="alert" style={styles.modal}>
                     <Ionicons
                     name="checkmark-circle"
                     size={64}
                     color="#4CAF50"
+                    accessible={false}
                     />
 
                     <Text style={styles.title}>
@@ -33,6 +35,10 @@ export default function OrderSuccessModal({ visible, onClose }) {
                     <Pressable
                     style={styles.button}
                     onPress={onClose}
+                    accessible={true}
+                    accessibilityRole="button"
+                    accessibilityLabel="Tillbaka till menyn"
+                    accessibilityHint="Stänger bekräftelsemodalen"
                     >
                     <Text style={styles.buttonText}>
                         Tillbaka till menyn

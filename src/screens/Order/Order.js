@@ -12,6 +12,7 @@ export default function Order() {
         source={require("../../resources/background-no-food.png")}
         style={styles.background}
         resizeMode="cover"
+        accessible={false}
       >
         <View style={styles.orderContent}>
           <OrderHeader />

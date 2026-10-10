@@ -17,6 +17,8 @@ export default function AddMealToOrderButton({ meal }) {
     <>
       <View style={styles.buttonLayout}>
         <Pressable
+        accessibilityLabel="Lägg till produkt till beställning"
+        accessibilityHint="Produkten läggs till beställning"
           style={styles.button}
           onPress={() => {handleAddMeal(); }}
         >
@@ -24,6 +26,7 @@ export default function AddMealToOrderButton({ meal }) {
             name="add-circle-outline"
             size={32}
             color="black"
+            accessible={false}
           ></Ionicons>
         </Pressable>
       </View>

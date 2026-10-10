@@ -11,8 +11,10 @@ export default function OrderButtonDirector() {
       <Pressable
         style={styles.orderButton}
         onPress={() => navigation.navigate("Order")}
+        accessibilityLabel="Knapp för att gå till beställningsmenyn"
+        accessibilityHint="Öppnar beställningsmenyn"
       >
-        <Ionicons name="restaurant-outline" size={32} color="black" />
+        <Ionicons name="restaurant-outline" accessible={false} size={32} color="black" />
       </Pressable>
     </View>
   );

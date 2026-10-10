@@ -46,6 +46,8 @@ export default function OrderList() {
         renderItem={({ item, index }) => {
           return (
             <View
+            accessible={true}
+            accessibilityLabel={`${item.name}, ${item.price}`}
               style={{
                 backgroundColor: "transparent",
                 padding: 12,
@@ -59,6 +61,7 @@ export default function OrderList() {
               }}
             >
               <Image
+                accessible={false}
                 source={item.image}
                 style={{ width: 80, height: 80, borderRadius: 8 }}
               />
@@ -80,11 +83,11 @@ export default function OrderList() {
                   {item.price ? `${item.price} kr` : "Pris saknas"}
                 </Text>
               </View>
-              <Pressable style={orderStyles.deleteButton}>
+              <Pressable onPress={() => handleDeleteMealFromOrder(index)} accessible={true} accessibilityLabel={`Ta bort ${item.name} från din beställning`} accessibilityHint="Tar bort en produkt från din beställning" style={orderStyles.deleteButton}>
                 <Ionicons
                   name="close-outline"
                   size={35}
-                  onPress={() => handleDeleteMealFromOrder(index)}
+                  accessible={false}
                 ></Ionicons>
               </Pressable>
             </View>
