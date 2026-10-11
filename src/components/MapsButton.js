@@ -2,6 +2,7 @@ import {ActivityIndicator, Animated, Linking, Pressable} from "react-native";
 import {StyleSheet} from "react-native";
 import {useEffect, useRef, useState} from "react";
 import * as Location from "expo-location";
+import {leaveWarning} from "./LeaveWarning.js";
 
 export default function MapsButton() {
 
@@ -10,7 +11,6 @@ export default function MapsButton() {
     let myLongitude;
 
     const [loading, setLoading] = useState(false);
-
 
     async function getDrunk() {
         setLoading(true);
@@ -120,7 +120,6 @@ export default function MapsButton() {
         );
     }
 
-
     const scale = useRef(new Animated.Value(1)).current;
 
     useEffect(() => {
@@ -141,7 +140,7 @@ export default function MapsButton() {
     }, [loading]);
 
     return (
-        <Pressable style={style.element} onPress={() => getDrunk()}>
+        <Pressable style={style.element} onPress={() => leaveWarning(getDrunk)}>
             {loading ? <ActivityIndicator size="large" style={{transform: [{scale: 2}]}}/> :
                 <Animated.Image style={[style.image, {transform: [{scale}]}]}
                                 source={require("../resources/beermug.png")}/>}
