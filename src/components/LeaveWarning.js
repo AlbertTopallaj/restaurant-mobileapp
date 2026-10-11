@@ -2,12 +2,12 @@ import {Alert, Platform} from "react-native";
 
    export function leaveWarning(func) {
      Alert.alert(
-       'Leave app?',
-       'You are about to exit the app. Are you sure?',
+       'Lämna appen?',
+       'Du håller på att lämna appen. Är du säker?',
        [
-         { text: "Stay", style: 'cancel', onPress: () => {} },
+         { text: "Stanna", style: 'cancel', onPress: () => {} },
          {
-           text: 'Leave',
+           text: 'Lämna',
            style: 'destructive',
            onPress: () => func(),
          },
