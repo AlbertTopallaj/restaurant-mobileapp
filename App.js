@@ -47,6 +47,7 @@ export default function App() {
               component={Home}
               options={{
                 title: "Startsida",
+                headerShown: false,
               }}
             />
 
@@ -55,16 +56,26 @@ export default function App() {
               component={Order}
               options={{
                 title: "Beställ",
+                headerShown: false,
               }}
             />
 
             <Stack.Screen
               name="CategoryScreen"
               component={CategoryScreen}
-              options={{ title: "Meny" }}
+              options={{
+                title: "Meny",
+                headerShown: false,
+              }}
             />
 
-            <Stack.Screen name="ProductInfo" component={ProductInfo} />
+            <Stack.Screen
+              name="ProductInfo"
+              component={ProductInfo}
+              options={{
+                headerShown: false,
+              }}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </OrderProvider>
