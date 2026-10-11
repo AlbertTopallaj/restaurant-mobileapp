@@ -141,9 +141,14 @@ export default function MapsButton() {
     }, [loading]);
 
     return (
-        <Pressable style={style.element} onPress={() => getDrunk()}>
+        <Pressable style={style.element} onPress={() => getDrunk()}
+                   accessibilityRole="button"
+                   accessibilityLabel="Hitta närmaste Systembolag"
+                   accessibilityHint="Använder din plats och öppnar vägbeskrivningen i Google Maps"
+                   accessibilityState={{busy: loading, disabled: loading}}
+                   disabled={loading}>
             {loading ? <ActivityIndicator size="large" style={{transform: [{scale: 2}]}}/> :
-                <Animated.Image style={[style.image, {transform: [{scale}]}]}
+                <Animated.Image accessible={false} style={[style.image, {transform: [{scale}]}]}
                                 source={require("../resources/beermug.png")}/>}
         </Pressable>
     )
